@@ -449,7 +449,7 @@ footer .bg-socialmedia-container {
 
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .banner {
     height: 40vh;
     margin-top: 120px;
