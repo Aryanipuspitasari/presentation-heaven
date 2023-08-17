@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+
+:root {
+  --main-text-color: black;
+  --secondary-text-color: white;
+  --third-text-color: #8b4513;
+  --fourth-text-color: midnightblue;
+  --main-background-color: #11baee;
+  --secondary-background-color: black;
+  /* SOCIALMEDIA COLOR */
+  --sos-bg: #2c2c2c;
+  --youtube: #e52d27;
+  --facebook: #1d9bf0;
+}
+
+
+/* BANNER */
+
+.banner {
+  height: 100vh;
+  /* position: relative; */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/banner.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+}
+
+form h4,
+h3 {
+  margin: 0.7rem 0 0.2rem 0;
+}
+
+input,
+textarea,
+.submit-btn {
+  padding: 0.5rem;
+  border: 1px solid rgba(128, 128, 128, 0.65);
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none; /* Remove default outline */
+}
+
+.submit-btn {
+  width: 10rem;
+  margin-top: 0.5rem;
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-text-color);
+}
+
+input:focus,
+textarea:focus {
+  border-color: blue;
+}
+
+@media (min-width: 601px) {
+  form {
+    width: 90%;
+  }
+}
+
+@media (min-width: 601px) {
+  form {
+    width: 70%;
+  }
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT AWESOME -->
+
+    <script
+      src="https://kit.fontawesome.com/94343bb785.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="form.css" />
+    <title>Visit Lombok Tour</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light fs-2" href="./index.html">Visit Lombok Tour</a>
+    
+        </div>
+      </div>
+    </nav>
+
+    
+    <section class="banner">
+      
+      <form action="https://www.example.com/search" method="post" class=".contact-form">
+
+        <h4>Form Travel Inquiry</h4>
+
+        <section class="personal-data">
+          <fieldset class="field">
+  
+            <label for="name" class=""><b>Name</b></label>
+            
+            <input type="text" 
+            id="name" 
+            name="name" 
+            required 
+            placeholder="Please fill in your full name" 
+            minlength="5"/>
+
+            <label for="phone"><b>Phone:</b></label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="[0-9]{4.5}"
+            />
+            
+            <label for="email" class=""><b>E-mail</b></label>
+            
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="please enter your email"
+              minlength="1"
+    
+            />
+
+            <label for="tripdate"><b>Trip date:</b></label>
+          
+            <input type="date" />
+            
+
+            <label for="messages" class=""><b>Write your inquiries</b></label>
+            
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="10"
+              class="w-100"
+              placeholder="Send us a message! Please let us know as well for how many pax are you going to book."
+              minlength="1"
+              required
+            ></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </fieldset>
+        </section>
+      </form>  
+      
+    </section>
+    
+  </body>
+
+</html>

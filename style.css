@@ -446,6 +446,7 @@ footer .bg-socialmedia-container {
     bottom: 95px;
     right: 2%;
   }
+
 }
 
 @media (min-width: 1024px) {
@@ -487,4 +488,47 @@ footer .bg-socialmedia-container {
   footer .about {
     width: 90%;
   }
+}
+
+
+/* SECOND HTML PAGE  */
+
+
+/* FORM */
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+}
+
+form h4,
+h3 {
+  margin: 0.7rem 0 0.2rem 0;
+}
+
+input,
+textarea,
+.submit-btn {
+  padding: 0.5rem;
+  border: 1px solid rgba(128, 128, 128, 0.65);
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none; /* Remove default outline */
+}
+
+.submit-btn {
+  width: 10rem;
+  margin-top: 0.5rem;
+  background: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: blue;
 }
