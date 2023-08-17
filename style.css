@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --main-text-color: black;
+  --secondary-text-color: white;
+  --third-text-color: #8b4513;
+  --fourth-text-color: midnightblue;
+  --main-background-color: #11baee;
+  --secondary-background-color: black;
+
+  /* SOCIAL MEDIA */
+  /* --linkedin: #0a66c2;
+  --email: #b23121;
+  --github: #f4cbb2; */
+  --sos-bg:#2c2c2c;
+  --youtube:#e52d27;
+  --facebook:#1d9bf0;
+}
+
+/* NAV */
+
+nav {
+  background-color: var(--secondary-background-color);
+}
+
+main {
+  margin-top: 60px;
+}
+
+/* HERO */
+
+.banner {
+  height: auto;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/banner.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.banner-content {
+  padding: 20px;
+}
+
+.banner-content h1 {
+  color: var(--secondary-text-color);
+  font-size: 30px;
+}
+
+.banner p {
+  font-size: inherit;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* TOUR PACKAGE */
+
+.tour {
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.tour h2 {
+  font-size: 30px;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* PLAN TOUR */
+
+.plan-tour {
+  margin-top: 50px;
+  padding: 10px;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--main-background-color);
+}
+
+
+.bg-button {
+  background-color: var(--secondary-text-color);
+  display: grid;
+  place-items: center;
+  
+}
+
+.bg-button .button {
+  border: 0px solid;
+  outline: 2px solid;
+  color: var(--main-text-color);
+  outline-color: var(--secondary-text-color);
+  cursor: pointer;
+  font-size: 1rem;
+  height: 80px;
+  max-width: 300px;
+
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: all 850ms cubic-bezier(.36, .63, .5, .73);
+}
+
+.button:hover {
+  border: 2px solid --main-text-color;
+  outline-color: rgba(225, 225, 225, 0);
+  outline-offset: 15px;
+  color: var(--fourth-text-color);
+}
+
+/* DESTINATION */
+
+.destination {
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.destination .destination-cards {
+  padding: 20px;
+  margin-top: 50px;
+  display: grid;
+  gap: 20px;
+}
+
+.destination .dest-list {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.destination .dest-list:hover {
+  transform: scale(0.9);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.destination h2 {
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.destination a {
+  text-decoration: none;
+}
+
+.destination .dest-list {
+  width: 100%;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  border-radius: 20px;
+}
+
+.dest-list:nth-child(1) {
+  background-image: url(./images/kuta.jpg);
+}
+
+.dest-list:nth-child(2) {
+  background-image: url(./images/mandalika.jpg);
+}
+
+.dest-list:nth-child(3) {
+  background-image: url(./images/gili.jpeg);
+}
+
+.dest-list:nth-child(4) {
+  background-image: url(./images/rinjani.jpg);
+}
+
+.dest-list:nth-child(5) {
+  background-image: url(./images/pinkbeach.jpeg);
+}
+
+.dest-list:nth-child(6) {
+  background-image: url(./images/sekotong.jpg);
+}
+
+.dest-list:nth-child(7) {
+  background-image: url(./images/senaru.jpg);
+}
+
+.dest-list:nth-child(8) {
+  background-image: url(./images/sasak.jpeg);
+}
+
+.dest-list:nth-child(9) {
+  background-image: url(./images/sembalun.jpg);
+}
+
+.dest-list a {
+  color: var(--third-text-color);
+  font-size: 30px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-text-color);
+  margin-top: 50px;
+  padding: 10px;
+}
+
+footer h5 {
+  font-size: 35px;
+  margin: 10px 0 10px 0;
+}
+
+.about,
+.address,
+.contact-list {
+  padding: 10px;
+}
+
+footer .about p {
+ text-align: justify;
+}
+
+
+footer .contact-list {
+  background-color: var(--sos-bg);
+  display: grid;
+  place-items: center;
+
+}
+
+footer .bg-socialmedia-container {
+ 
+  display: grid;
+  place-items: center;
+  height: 10vh;
+}
+
+.socialmedia-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 10px;
+}
+
+
+
+.socialmedia-button {
+  width: 68px;
+  height: 68px;
+  border-radius: 15%;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.socialmedia-button img {
+  width: 100%;
+  transition: all 0.3s;
+} 
+
+.socialmedia-button:hover {
+  outline-offset: 3px;
+  transition: all 0.3s;
+}
+
+
+.socialmedia-button:hover:nth-child(1) {
+  background: radial-gradient(
+    circle at 30% 107%, #fdf487 0%,
+    #fdf497 5%, #fd5949 45%, 
+    #f6249f 60%, #285aeb 90%
+  );
+}
+
+.socialmedia-button:hover:nth-child(2) {
+  background-color: var(--facebook);
+}
+
+.socialmedia-button:hover:nth-child(3) {
+  background-color: var(--youtube);
+}
+
+
+@media (min-width: 601px) {
+  main .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .banner h1 {
+    color: var(--fourth-text-color);
+  }
+
+  .banner-content p {
+    line-height: 1.5;
+  }
+
+  .plan-tour {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .destination .grid-container {
+    display: grid;
+    grid-template-areas:
+      "kuta kuta mandalika gili"
+      "rinjani pinkbeach sekotong sekotong"
+      "senaru sembalun sembalun sasak";
+    gap: 20px;
+  }
+
+  .grid-container .grid-item:nth-child(1) {
+    grid-area: kuta;
+  }
+
+  .grid-container .grid-item:nth-child(2) {
+    grid-area: mandalika;
+  }
+
+  .grid-container .grid-item:nth-child(3) {
+    grid-area: gili;
+  }
+
+  .grid-container .grid-item:nth-child(4) {
+    grid-area: rinjani;
+  }
+
+  .grid-container .grid-item:nth-child(5) {
+    grid-area: pinkbeach;
+  }
+
+  .grid-container .grid-item:nth-child(6) {
+    grid-area: sekotong;
+  }
+
+  .grid-container .grid-item:nth-child(7) {
+    grid-area: senaru;
+  }
+
+  .grid-container .grid-item:nth-child(8) {
+    grid-area: sasak;
+  }
+
+  .grid-container .grid-item:nth-child(9) {
+    grid-area: sembalun;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    height: 40vh;
+    margin-top: 120px;
+  }
+
+  .banner-content {
+    padding: 20px;
+    height: auto;
+  }
+
+  .banner-content h1 {
+    font-size: 40px;
+  }
+
+  .banner-content p {
+    font-size: 23px;
+  }
+
+  .plan-tour-content h2 {
+    font-size: 40px;
+  }
+
+  .plan-tour .button {
+    font-size: 20px;
+  }
+
+  footer .about {
+    width: 90%;
+   }
+   
+}
+
