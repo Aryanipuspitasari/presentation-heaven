@@ -147,7 +147,7 @@ textarea:focus {
 
 @media (min-width: 601px) {
   form {
-    width: 90%;
+    width: 70%;
   }
 
   .popup-footer {
@@ -163,7 +163,7 @@ textarea:focus {
 
 @media (min-width: 1025px) {
   form {
-    width: 80%;
+    width: 50%;
   }
 
 }
