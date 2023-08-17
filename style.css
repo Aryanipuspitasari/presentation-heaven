@@ -12,14 +12,10 @@
   --fourth-text-color: midnightblue;
   --main-background-color: #11baee;
   --secondary-background-color: black;
-
-  /* SOCIAL MEDIA */
-  /* --linkedin: #0a66c2;
-  --email: #b23121;
-  --github: #f4cbb2; */
-  --sos-bg:#2c2c2c;
-  --youtube:#e52d27;
-  --facebook:#1d9bf0;
+  /* SOCIALMEDIA COLOR */
+  --sos-bg: #2c2c2c;
+  --youtube: #e52d27;
+  --facebook: #1d9bf0;
 }
 
 /* NAV */
@@ -104,12 +100,10 @@ main {
   background-color: var(--main-background-color);
 }
 
-
 .bg-button {
   background-color: var(--secondary-text-color);
   display: grid;
   place-items: center;
-  
 }
 
 .bg-button .button {
@@ -128,7 +122,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  transition: all 850ms cubic-bezier(.36, .63, .5, .73);
+  transition: all 850ms cubic-bezier(0.36, 0.63, 0.5, 0.73);
 }
 
 .button:hover {
@@ -159,7 +153,9 @@ main {
 
 .destination .dest-list:hover {
   transform: scale(0.9);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .destination h2 {
@@ -226,6 +222,106 @@ main {
   font-weight: bold;
 }
 
+/* POP UP */
+
+.popup-toggle {
+  display: none;
+}
+
+.popup-footer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: var(--main-background-color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border-radius: 40px;
+}
+
+.popup-footer i {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.pop-up {
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  color: var(--main-background-color);
+  background-color: var(--fourth-text-color);
+  padding: 10px;
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+
+/* .close-button {
+  position: absolute;
+  top: -25px;
+  right: -8px;
+} */
+
+/* .close-button i {
+  color: whitesmoke;
+} */
+
+.popup-toggle:checked ~ .pop-up {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+/* .pop-up {
+  display: none;
+}
+
+.pop-up:target {
+  display: block;
+}
+
+.popup-footer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: var(--main-background-color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  border: none;
+  overflow: hidden;
+}
+
+.close-button i {
+  margin-right: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.pop-up {
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  color: var(--main-background-color);
+  background-color: var(--fourth-text-color);
+  padding: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: -25px;
+  right: -8px;
+} */
+
 /* FOOTER */
 
 footer {
@@ -247,19 +343,16 @@ footer h5 {
 }
 
 footer .about p {
- text-align: justify;
+  text-align: justify;
 }
-
 
 footer .contact-list {
   background-color: var(--sos-bg);
   display: grid;
   place-items: center;
-
 }
 
 footer .bg-socialmedia-container {
- 
   display: grid;
   place-items: center;
   height: 10vh;
@@ -273,8 +366,6 @@ footer .bg-socialmedia-container {
   gap: 24px;
   padding: 10px;
 }
-
-
 
 .socialmedia-button {
   width: 68px;
@@ -293,19 +384,21 @@ footer .bg-socialmedia-container {
 .socialmedia-button img {
   width: 100%;
   transition: all 0.3s;
-} 
+}
 
 .socialmedia-button:hover {
   outline-offset: 3px;
   transition: all 0.3s;
 }
 
-
 .socialmedia-button:hover:nth-child(1) {
   background: radial-gradient(
-    circle at 30% 107%, #fdf487 0%,
-    #fdf497 5%, #fd5949 45%, 
-    #f6249f 60%, #285aeb 90%
+    circle at 30% 107%,
+    #fdf487 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #f6249f 60%,
+    #285aeb 90%
   );
 }
 
@@ -316,7 +409,6 @@ footer .bg-socialmedia-container {
 .socialmedia-button:hover:nth-child(3) {
   background-color: var(--youtube);
 }
-
 
 @media (min-width: 601px) {
   main .banner {
@@ -414,7 +506,5 @@ footer .bg-socialmedia-container {
 
   footer .about {
     width: 90%;
-   }
-   
+  }
 }
-
