@@ -143,25 +143,6 @@ main {
   padding: 10px;
 }
 
-.destination .destination-cards {
-  padding: 20px;
-  margin-top: 50px;
-  display: grid;
-  gap: 20px;
-}
-
-.destination .dest-list {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.destination .dest-list:hover {
-  transform: scale(0.9);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-
 .destination h2 {
   font-size: 50px;
   text-align: center;
@@ -169,63 +150,49 @@ main {
  
 }
 
-.destination a {
-  text-decoration: none;
-}
-
-.destination .dest-list {
-  width: 100%;
-  height: 30vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  display: flex;
-  justify-content: start;
-  align-items: end;
-  border-radius: 20px;
-}
-
-.dest-list:nth-child(1) {
-  background-image: url(./images/kuta.jpg);
-}
-
-.dest-list:nth-child(2) {
-  background-image: url(./images/mandalika.jpg);
-}
-
-.dest-list:nth-child(3) {
-  background-image: url(./images/gili.jpeg);
-}
-
-.dest-list:nth-child(4) {
-  background-image: url(./images/rinjani.jpg);
-}
-
-.dest-list:nth-child(5) {
-  background-image: url(./images/pinkbeach.jpeg);
-}
-
-.dest-list:nth-child(6) {
-  background-image: url(./images/sekotong.jpg);
-}
-
-.dest-list:nth-child(7) {
-  background-image: url(./images/senaru.jpg);
-}
-
-.dest-list:nth-child(8) {
-  background-image: url(./images/sasak.jpeg);
-}
-
-.dest-list:nth-child(9) {
-  background-image: url(./images/sembalun.jpg);
-}
-
-.dest-list a {
-  color: var(--third-text-color);
-  font-size: 30px;
+.bg-destination {
   padding: 10px;
+  display: grid;
+  place-items: center;
+  height: auto;
+  margin-top: 10%;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-gallery {
+  position: relative;
+  left: 0;
+  width: 260px;
+  height: 340px;
+  border-radius: 10px;
+  transition: 1s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-gallery:not(:first-child) {
+  margin-top: -150px;
+}
+
+.card-gallery:hover {
+  transform: scale(1.05);
+  z-index: 1;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.card-gallery:hover ~ .card-gallery {
+  bottom: 55px;
+}
+
+.card-gallery img {
+  height:100%;
+  object-fit: cover;
+  border: 6px;
 }
 
 /* POP UP */
@@ -393,60 +360,54 @@ footer .bg-socialmedia-container {
     justify-content: space-around;
   }
 
-  .destination .grid-container {
-    display: grid;
-    grid-template-areas:
-      "kuta kuta mandalika gili"
-      "rinjani pinkbeach sekotong sekotong"
-      "senaru sembalun sembalun sasak";
-    gap: 20px;
+  .bg-destination {
+    padding: 30px;
+    overflow: hidden;
+    margin-top: -5px;
+  }
+  
+  .gallery {
+    flex-direction: row;
+    left: calc(50%, -330px);
+  }
+  
+  .card-gallery {
+    width: 260px;
+    height: 340px;
+  }
+  
+  .card-gallery:not(:first-child) {
+    margin-top: 0;
+    margin-left: -140px;
+  }
+  
+  .card-gallery:hover {
+    transform: translateY(-16px);
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 0;
+  }
+  
+  .card-gallery:hover ~ .card-gallery {
+    left: 144px;
+    bottom: 0;
+  }
+  
+  .card-gallery img {
+    height: 100%;
+    object-fit: cover;
+    border: 6px;
   }
 
-  .grid-container .grid-item:nth-child(1) {
-    grid-area: kuta;
-  }
+.popup-footer {
+  bottom: 30px;
+  right: 30px;
+}
 
-  .grid-container .grid-item:nth-child(2) {
-    grid-area: mandalika;
-  }
-
-  .grid-container .grid-item:nth-child(3) {
-    grid-area: gili;
-  }
-
-  .grid-container .grid-item:nth-child(4) {
-    grid-area: rinjani;
-  }
-
-  .grid-container .grid-item:nth-child(5) {
-    grid-area: pinkbeach;
-  }
-
-  .grid-container .grid-item:nth-child(6) {
-    grid-area: sekotong;
-  }
-
-  .grid-container .grid-item:nth-child(7) {
-    grid-area: senaru;
-  }
-
-  .grid-container .grid-item:nth-child(8) {
-    grid-area: sasak;
-  }
-
-  .grid-container .grid-item:nth-child(9) {
-    grid-area: sembalun;
-  }
-
-  .popup-footer {
-    bottom: 30px;
-    right: 30px;
-  }
-
-  .pop-up {
-    bottom: 95px;
-    right: 2%;
-  }
+.pop-up {
+  bottom: 95px;
+  right: 2%;
+}
 
 }
 
@@ -486,50 +447,29 @@ footer .bg-socialmedia-container {
     font-size: 20px;
   }
 
+  .bg-destination {
+    margin-top: -5px;
+  }
+
+  .card-gallery {
+    width: 280px;
+    height: 380px;
+  }
+
+  .card-gallery img {
+    height: 100%;
+  }
+
+  .card-gallery:not(:first-child) {
+    margin-left: -54px;
+  }
+
+  .card-gallery:hover ~ .card-gallery {
+    left: 55px;
+    bottom: 0;
+  }
+
   footer .about {
     width: 90%;
   }
-}
-
-
-/* SECOND HTML PAGE  */
-
-
-/* FORM */
-form {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-}
-
-fieldset {
-  border: none;
-}
-
-form h4,
-h3 {
-  margin: 0.7rem 0 0.2rem 0;
-}
-
-input,
-textarea,
-.submit-btn {
-  padding: 0.5rem;
-  border: 1px solid rgba(128, 128, 128, 0.65);
-  display: block;
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  outline: none; /* Remove default outline */
-}
-
-.submit-btn {
-  width: 10rem;
-  margin-top: 0.5rem;
-  background: none;
-}
-
-input:focus,
-textarea:focus {
-  border-color: blue;
 }
