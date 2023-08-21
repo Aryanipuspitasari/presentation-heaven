@@ -224,6 +224,7 @@ main {
   transition: 1s ease-in-out;
   overflow: hidden;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+  
 }
 
 .card-gallery:not(:first-child) {
@@ -540,6 +541,7 @@ footer .bg-socialmedia-container {
 
   .card-gallery img {
     height: 100%;
+    object-fit: cover;
   }
 
   .card-gallery:not(:first-child) {
