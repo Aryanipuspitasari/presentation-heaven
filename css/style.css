@@ -47,7 +47,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(./images/banner.webp);
+  background-image: url(../images/banner.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -244,23 +244,23 @@ main {
 }
 
 .card-gallery:nth-child(1) {
-  background-image: url(./images/rinjani.jpg);
+  background-image: url(../images/rinjani.jpg);
 }
 
 .card-gallery:nth-child(2) {
-  background-image: url(./images/senaru.jpg);
+  background-image: url(../images/senaru.jpg);
 }
 
 .card-gallery:nth-child(3) {
-  background-image: url(./images/sembalun.jpg);
+  background-image: url(../images/sembalun.jpg);
 }
 
 .card-gallery:nth-child(4) {
-  background-image: url(./images/sekotong.jpg);
+  background-image: url(../images/sekotong.jpg);
 }
 
 .card-gallery:nth-child(5) {
-  background-image: url(./images/mandalika.jpg);
+  background-image: url(../images/mandalika.jpg);
 }
 
 .card-gallery:hover {
