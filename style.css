@@ -140,7 +140,8 @@ main {
   transform: scale(1.1); 
 }
 
-.card-tour:has(:hover, :focus) {
+/* .card-tour:has(:hover, :focus)  */
+.card-tour:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
@@ -216,6 +217,9 @@ main {
 }
 
 .card-gallery {
+  background-position: center;
+  background-repeat:no-repeat ;
+  background-size: cover;
   position: relative;
   left: 0;
   width: 260px;
@@ -224,11 +228,38 @@ main {
   transition: 1s ease-in-out;
   overflow: hidden;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 1px black;
   
 }
 
 .card-gallery:not(:first-child) {
   margin-top: -150px;
+}
+
+.card-gallery:nth-child(1) {
+  background-image: url(./images/rinjani.jpg);
+}
+
+.card-gallery:nth-child(2) {
+  background-image: url(./images/senaru.jpg);
+}
+
+.card-gallery:nth-child(3) {
+  background-image: url(./images/sembalun.jpg);
+}
+
+.card-gallery:nth-child(4) {
+  background-image: url(./images/sekotong.jpg);
+}
+
+.card-gallery:nth-child(5) {
+  background-image: url(./images/mandalika.jpg);
 }
 
 .card-gallery:hover {
@@ -240,12 +271,6 @@ main {
 
 .card-gallery:hover ~ .card-gallery {
   bottom: 55px;
-}
-
-.card-gallery img {
-  height: 100%;
-  object-fit: cover;
-  border: 6px;
 }
 
 /* POP UP */
@@ -283,7 +308,6 @@ main {
   border-radius: 10px;
   width: 200px;
   height: 80px;
-  /* display: none; */
   display: grid;
   place-items: center;
   opacity: 0;
@@ -302,7 +326,6 @@ main {
 }
 
 .popup-toggle:checked ~ .pop-up {
-  /* display: block; */
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -327,20 +350,25 @@ footer .about p {
   text-align: justify;
 }
 
-footer .address {
-  line-height: 1.5;
-}
-
-footer .address p i{
-  font-size: 20px;
-}
-
+footer .about h5,
+footer .about p,
 footer .address h5,
 footer .address h6,
 footer .address p {
   margin: 0;
 }
 
+footer .address,
+footer .about {
+  line-height: 1.6;
+}
+
+footer .address p i{
+  font-size: 20px;
+}
+
+
+/* SOCIAL MEDIA */
 
 footer .socialmedia-container {
   background-color: var(--sos-bg);
@@ -472,12 +500,6 @@ footer .bg-socialmedia-container {
     bottom: 0;
   }
 
-  .card-gallery img {
-    height: 100%;
-    object-fit: cover;
-    border: 6px;
-  }
-
   /* POP UP FOOTER */
   .popup-footer {
     bottom: 30px;
@@ -537,11 +559,6 @@ footer .bg-socialmedia-container {
   .card-gallery {
     width: 280px;
     height: 380px;
-  }
-
-  .card-gallery img {
-    height: 100%;
-    object-fit: cover;
   }
 
   .card-gallery:not(:first-child) {
